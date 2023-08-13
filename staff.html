@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Doctors</h1>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: blanchedalmond;
+        }
+        
+        #corner-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+    <p id="veriAlani"></p>
+    <div id="deneme"></div>
+    <p id="demo"></p>
+    <div class="d-flex" class="content">
+      <div class="card" class="content">
+        <div class="card-body">
+          <img src="/360_F_143819453_Eai3IbcXhhGGoCWY5lso1ijI9nH387yC.jpg" alt="Circle Image" class="rounded-circle ml-3" style="width: 70px; height: 50px;">
+            Alex Rosetta <br>
+          <h6 style="color: grey;">alexyrosetta@egmail.com</h6>  
+        </div>      
+    </div>   
+        <div class="d-flex">
+          <div class="card" class="content">
+            
+            <div class="card-body">
+              <img src="/istockphoto-177839842-612x612.jpg" alt="Circle Image" class="rounded-circle ml-3" style="width: 70px; height: 50px;">
+                Maria July
+                <h6 style="color: grey;"> mariajuly@egmail.com</h6>
+            </div>
+          </div>       
+        </div> 
+    
+    <script>
+       /*
+        const detay = {
+            name: "Alex Rosetta",
+            email: "alexyrosetta@egmail.com",
+            image: "staff-1.png",
+        };
+        
+        const veriAlani = document.getElementById("veriAlani");
+        
+        veriAlani.innerHTML = `Ad: ${detay.name}, Soyad: ${detay.email}, Yaş: ${detay.image}`;
+*/
+let demoParagraph = document.getElementById("demo");
+console.log(demoParagraph.textContent); 
+
+
+let contentDivs = document.getElementsByClassName("content");
+for (let i = 0; i < contentDivs.length; i++) {
+    console.log(contentDivs[i].textContent);
+}
+
+let selectedElements = document.querySelectorAll(".content");
+selectedElements.forEach(element => {
+    console.log(element.textContent);
+});
+        function gotolink(link) {
+        console.log(link.value);
+        location.href = '/service.html';
+
+        } 
+    </script>
+</div>
+</div>
+<button type="button" class="btn btn-primary" id="corner-button" onclick="gotolink(this)" value="/service.html">Next</button>
+</body>
+</html>
